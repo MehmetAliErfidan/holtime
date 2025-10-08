@@ -3,116 +3,125 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import Button from "@/components/ui/Button";
-import Card from "@/components/ui/Card";
-import Input from "@/components/ui/Input";
-import { signIn } from "@/lib/auth";
-import toast, { Toaster } from "react-hot-toast";
+import Button from "../../../components/ui/Button";
+import toast from "react-hot-toast";
+
+function Input({ ...props }: React.InputHTMLAttributes<HTMLInputElement>) {
+  return (
+    <input
+      className="w-full px-4 py-2 border border-[var(--gray-300)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--primary-turquoise)]"
+      {...props}
+    />
+  );
+}
 
 export default function LoginPage() {
   const router = useRouter();
-  const [isLoading, setIsLoading] = useState(false);
-  const [formData, setFormData] = useState({
-    email: "",
-    password: "",
-  });
+  const [loading, setLoading] = useState(false);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsLoading(true);
+    setLoading(true);
 
     try {
-      console.log("Attempting login..."); // DEBUG
-
-      const result = await signIn({
-        email: formData.email,
-        password: formData.password,
+      const response = await fetch("/api/auth/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, password }),
       });
 
-      console.log("Login result:", result); // DEBUG
+      const data = await response.json();
 
-      if (result.success) {
-        console.log("Login successful, redirecting to dashboard...");
-        toast.success("Berhasil masuk!");
+      if (!response.ok) {
+        // Hata mesajlarını Bahasa Indonesia'ya çevir
+        let errorMessage = "Terjadi kesalahan";
 
-        // Hard redirect (window.location kullan)
-        setTimeout(() => {
-          window.location.href = "/dashboard";
-        }, 1000);
-      } else {
-        console.log("Login failed:", result.error); // DEBUG
-        toast.error(result.error || "Email atau kata sandi salah");
+        if (data.error) {
+          const error = data.error.toLowerCase();
+
+          if (
+            error.includes("invalid") ||
+            error.includes("credentials") ||
+            error.includes("password")
+          ) {
+            errorMessage = "Email atau password salah";
+          } else if (error.includes("email") && error.includes("confirmed")) {
+            errorMessage = "Silakan konfirmasi email Anda terlebih dahulu";
+          } else if (error.includes("not found")) {
+            errorMessage = "Akun tidak ditemukan";
+          } else {
+            errorMessage = data.error;
+          }
+        }
+
+        throw new Error(errorMessage);
       }
-    } catch (error) {
-      console.error("Login catch error:", error); // DEBUG
-      toast.error("Terjadi kesalahan sistem");
+
+      toast.success("Login berhasil!");
+      window.location.href = "/dashboard";
+    } catch (error: any) {
+      console.error("Login error:", error);
+      toast.error(error.message || "Gagal login");
     } finally {
-      setIsLoading(false);
+      setLoading(false);
     }
   };
 
   return (
-    <main className="min-h-screen flex items-center justify-center p-4">
-      <Toaster position="top-center" />
+    <div className="min-h-screen flex items-center justify-center bg-[var(--gray-50)] p-4">
+      <div className="w-full max-w-md bg-white rounded-lg shadow-sm border border-[var(--gray-300)] p-8">
+        <h1 className="text-2xl font-bold text-[var(--gray-900)] mb-6 text-center">
+          Masuk ke HolTime
+        </h1>
 
-      <div className="w-full max-w-md">
-        {/* Logo */}
-        <div className="text-center mb-8">
-          <h1 className="text-4xl font-bold mb-2">
-            <span className="gradient-turquoise bg-clip-text text-transparent">
-              HolTime
-            </span>
-          </h1>
-          <p className="text-[var(--gray-500)]">Masuk ke akun Anda</p>
-        </div>
-
-        <Card>
-          <form onSubmit={handleSubmit} className="space-y-4">
+        <form onSubmit={handleSubmit} className="space-y-4">
+          <div>
+            <label className="block text-sm font-medium text-[var(--gray-700)] mb-2">
+              Email
+            </label>
             <Input
-              label="Email"
               type="email"
-              placeholder="bisnis@email.com"
-              required
-              value={formData.email}
-              onChange={(e) =>
-                setFormData({ ...formData, email: e.target.value })
+              value={email}
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                setEmail(e.target.value)
               }
-            />
-
-            <Input
-              label="Kata Sandi"
-              type="password"
-              placeholder="Masukkan kata sandi"
+              placeholder="nama@email.com"
               required
-              value={formData.password}
-              onChange={(e) =>
-                setFormData({ ...formData, password: e.target.value })
-              }
             />
-
-            <Button
-              type="submit"
-              variant="primary"
-              className="w-full"
-              isLoading={isLoading}
-            >
-              Masuk
-            </Button>
-          </form>
-
-          <div className="mt-6 text-center">
-            <p className="text-sm text-[var(--gray-500)]">
-              Belum punya akun?{" "}
-              <Link
-                href="/register"
-                className="text-[var(--primary-turquoise)] font-medium hover:text-[var(--primary-dark)]"
-              >
-                Daftar gratis
-              </Link>
-            </p>
           </div>
-        </Card>
+
+          <div>
+            <label className="block text-sm font-medium text-[var(--gray-700)] mb-2">
+              Password
+            </label>
+            <Input
+              type="password"
+              value={password}
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                setPassword(e.target.value)
+              }
+              placeholder="Masukkan password"
+              required
+            />
+          </div>
+
+          <Button type="submit" disabled={loading} className="w-full">
+            {loading ? "Memproses..." : "Masuk"}
+          </Button>
+        </form>
+
+        <p className="text-center text-sm text-[var(--gray-600)] mt-6">
+          Belum punya akun?{" "}
+          <Link
+            href="/register"
+            className="text-[var(--primary-turquoise)] hover:underline font-medium"
+          >
+            Daftar Gratis
+          </Link>
+        </p>
       </div>
-    </main>
+    </div>
   );
 }
