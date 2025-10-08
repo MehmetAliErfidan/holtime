@@ -33,7 +33,7 @@ export default function HomePage() {
           <br />
           untuk Bisnis Anda
         </h1>
-        <p className="text-xl text-[var(--gray-600)] mb-8 max-w-2xl mx-auto">
+        <p className="text-xl text-[var(--gray-700)] mb-8 max-w-2xl mx-auto">
           Kelola janji temu dengan mudah. Otomatis kirim konfirmasi dan
           pengingat. Tanpa ribet, tanpa mahal.
         </p>
@@ -81,7 +81,7 @@ export default function HomePage() {
             <h3 className="text-xl font-semibold text-[var(--gray-900)] mb-2">
               Takvim Otomatis
             </h3>
-            <p className="text-[var(--gray-600)]">
+            <p className="text-[var(--gray-700)]">
               Atur jam kerja sekali, sistem otomatis tampilkan slot tersedia.
               Mudah dan cepat.
             </p>
@@ -105,7 +105,7 @@ export default function HomePage() {
             <h3 className="text-xl font-semibold text-[var(--gray-900)] mb-2">
               Email Otomatis
             </h3>
-            <p className="text-[var(--gray-600)]">
+            <p className="text-[var(--gray-700)]">
               Konfirmasi langsung terkirim. Pengingat 24 jam sebelum janji temu.
               Tanpa lupa.
             </p>
@@ -129,7 +129,7 @@ export default function HomePage() {
             <h3 className="text-xl font-semibold text-[var(--gray-900)] mb-2">
               Dashboard Lengkap
             </h3>
-            <p className="text-[var(--gray-600)]">
+            <p className="text-[var(--gray-700)]">
               Lihat semua janji temu dalam satu tempat. Filter, kelola, hubungi
               pelanggan.
             </p>
@@ -152,7 +152,7 @@ export default function HomePage() {
               <h3 className="text-lg font-semibold text-[var(--gray-900)] mb-2">
                 Daftar Gratis
               </h3>
-              <p className="text-[var(--gray-600)]">
+              <p className="text-[var(--gray-700)]">
                 Buat akun dalam 2 menit. Tanpa kartu kredit.
               </p>
             </div>
@@ -164,7 +164,7 @@ export default function HomePage() {
               <h3 className="text-lg font-semibold text-[var(--gray-900)] mb-2">
                 Atur Jam Kerja
               </h3>
-              <p className="text-[var(--gray-600)]">
+              <p className="text-[var(--gray-700)]">
                 Tentukan kapan bisnis Anda buka. Sistem otomatis siap.
               </p>
             </div>
@@ -176,7 +176,7 @@ export default function HomePage() {
               <h3 className="text-lg font-semibold text-[var(--gray-900)] mb-2">
                 Bagikan Link
               </h3>
-              <p className="text-[var(--gray-600)]">
+              <p className="text-[var(--gray-700)]">
                 Share link booking ke pelanggan. Mereka langsung bisa booking!
               </p>
             </div>
@@ -189,7 +189,7 @@ export default function HomePage() {
         <h2 className="text-3xl font-bold text-center text-[var(--gray-900)] mb-4">
           Harga Transparan
         </h2>
-        <p className="text-center text-[var(--gray-600)] mb-12">
+        <p className="text-center text-[var(--gray-700)] mb-12">
           Satu paket, semua fitur. Tanpa biaya tersembunyi.
         </p>
 
@@ -198,7 +198,7 @@ export default function HomePage() {
             <div className="text-4xl font-bold text-[var(--gray-900)] mb-2">
               Rp 150.000
             </div>
-            <div className="text-[var(--gray-600)]">per bulan</div>
+            <div className="text-[var(--gray-700)]">per bulan</div>
           </div>
 
           <ul className="space-y-3 mb-8">
@@ -216,7 +216,7 @@ export default function HomePage() {
                   d="M5 13l4 4L19 7"
                 />
               </svg>
-              <span className="text-[var(--gray-700)]">Unlimited booking</span>
+              <span className="text-[var(--gray-800)]">Unlimited booking</span>
             </li>
             <li className="flex items-start gap-3">
               <svg
@@ -232,7 +232,7 @@ export default function HomePage() {
                   d="M5 13l4 4L19 7"
                 />
               </svg>
-              <span className="text-[var(--gray-700)]">
+              <span className="text-[var(--gray-800)]">
                 Email otomatis (konfirmasi + pengingat)
               </span>
             </li>
@@ -250,7 +250,7 @@ export default function HomePage() {
                   d="M5 13l4 4L19 7"
                 />
               </svg>
-              <span className="text-[var(--gray-700)]">Dashboard lengkap</span>
+              <span className="text-[var(--gray-800)]">Dashboard lengkap</span>
             </li>
             <li className="flex items-start gap-3">
               <svg
@@ -266,7 +266,7 @@ export default function HomePage() {
                   d="M5 13l4 4L19 7"
                 />
               </svg>
-              <span className="text-[var(--gray-700)]">
+              <span className="text-[var(--gray-800)]">
                 Link booking sendiri
               </span>
             </li>
@@ -284,7 +284,7 @@ export default function HomePage() {
                   d="M5 13l4 4L19 7"
                 />
               </svg>
-              <span className="text-[var(--gray-700)]">Support penuh</span>
+              <span className="text-[var(--gray-800)]">Support penuh</span>
             </li>
           </ul>
 
