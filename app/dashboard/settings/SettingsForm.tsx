@@ -154,7 +154,9 @@ export default function SettingsForm({ business }: { business: Business }) {
           Slug (Link Booking) *
         </label>
         <div className="flex items-center gap-2">
-          <span className="text-sm text-[var(--gray-500)]">holtime.com/</span>
+          <span className="text-sm text-[var(--gray-500)]">
+            holtime.vercel.app/
+          </span>
           <Input
             type="text"
             value={slug}

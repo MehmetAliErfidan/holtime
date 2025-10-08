@@ -24,7 +24,7 @@ export default function CopyLinkBanner({ slug }: { slug: string }) {
           <p className="font-mono text-sm text-[var(--primary-turquoise)]">
             {typeof window !== "undefined"
               ? `${window.location.origin}/${slug}`
-              : `holtime.com/${slug}`}
+              : `holtime.vercel.app/${slug}`}
           </p>
         </div>
         <button

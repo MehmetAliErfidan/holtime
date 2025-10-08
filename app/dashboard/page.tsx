@@ -212,7 +212,7 @@ export default async function DashboardPage() {
                 Link Booking:
               </span>
               <p className="font-mono text-sm text-[var(--primary-turquoise)]">
-                holtime.com/{business.slug}
+                holtime.vercel.app/{business.slug}
               </p>
             </div>
           </div>
