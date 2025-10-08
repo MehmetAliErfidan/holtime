@@ -1,26 +1,229 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* 🎨 Zeply Renk Paleti - Primary (Turkuaz) */
+  --primary-turquoise: #14B8A6;
+  --primary-dark: #0D9488;
+  --primary-light: #5EEAD4;
+  --primary-pale: #CCFBF1;
+  
+  /* Opacity varyantları */
+  --primary-turquoise-10: rgba(20, 184, 166, 0.1);
+  --primary-turquoise-20: rgba(20, 184, 166, 0.2);
+  --primary-turquoise-50: rgba(20, 184, 166, 0.5);
+  
+  /* 🌫️ Gri Tonları */
+  --gray-900: #0F172A;
+  --gray-700: #334155;
+  --gray-500: #64748B;
+  --gray-300: #CBD5E1;
+  --gray-100: #F1F5F9;
+  --gray-50: #F8FAFC;
+  
+  /* ✨ Accent Renkler */
+  --accent-coral: #FB923C;
+  --accent-green: #10B981;
+  --accent-red: #EF4444;
+  --accent-yellow: #FBBF24;
+  
+  /* 🌐 Nötr */
+  --white: #FFFFFF;
+  --black: #000000;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
+/* 🌙 Dark mode desteği (gelecek için hazır) */
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --gray-50: #0F172A;
+    --gray-900: #F8FAFC;
   }
 }
 
+/* 🎯 Base styles */
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--gray-50);
+  color: var(--gray-700);
+  font-family: var(--font-geist-sans);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--gray-900);
+}
+
+/* Gradient text için */
+.gradient-turquoise {
+  background: linear-gradient(135deg, var(--primary-turquoise) 0%, var(--primary-light) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ==========================================
+   WORKING HOURS PAGE
+   ========================================== */
+
+.working-hour-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border: 1px solid var(--gray-300);
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+
+.working-hour-row:hover {
+  border-color: var(--primary-turquoise);
+  background-color: var(--gray-50);
+}
+
+.day-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  min-width: 140px;
+}
+
+.checkbox {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: var(--primary-turquoise);
+}
+
+.day-label {
+  font-weight: 600;
+  color: var(--gray-900);
+  cursor: pointer;
+  user-select: none;
+}
+
+.day-name-short {
+  display: none;
+}
+
+.time-inputs {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex: 1;
+}
+
+.time-separator {
+  color: var(--gray-500);
+  font-weight: 500;
+}
+
+/* Slot Duration */
+.slot-duration-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.slot-duration-option {
+  padding: 1rem;
+  border: 2px solid var(--gray-300);
+  border-radius: 8px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s;
+  user-select: none;
+}
+
+.slot-duration-option:hover {
+  border-color: var(--primary-turquoise);
+  background-color: var(--primary-pale);
+}
+
+.slot-duration-option.active {
+  border-color: var(--primary-turquoise);
+  background-color: var(--primary-turquoise);
+  color: white;
+}
+
+.slot-label {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+/* ==========================================
+   RESPONSIVE
+   ========================================== */
+
+@media (max-width: 768px) {
+  .working-hour-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .day-checkbox {
+    width: 100%;
+    min-width: unset;
+  }
+
+  .day-name-full {
+    display: none;
+  }
+
+  .day-name-short {
+    display: inline;
+  }
+
+  .time-inputs {
+    width: 100%;
+  }
+
+  .slot-duration-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .slot-duration-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================
+   BOOKING PAGE
+   ========================================== */
+
+.time-slot-button {
+  padding: 0.75rem;
+  border: 2px solid var(--gray-300);
+  border-radius: 8px;
+  background: white;
+  font-weight: 500;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.time-slot-button:hover:not(.disabled) {
+  border-color: var(--primary-turquoise);
+  background: var(--primary-pale);
+}
+
+.time-slot-button.selected {
+  border-color: var(--primary-turquoise);
+  background: var(--primary-turquoise);
+  color: white;
+}
+
+.time-slot-button.disabled {
+  border-color: var(--gray-200);
+  background: var(--gray-100);
+  color: var(--gray-400);
+  cursor: not-allowed;
+  text-decoration: line-through;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .time-slot-button {
+    padding: 0.5rem;
+    font-size: 0.85rem;
+  }
 }
