@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+html {
+  color-scheme: light only;
+}
+
 :root {
   /* 🎨 Zeply Renk Paleti - Primary (Turkuaz) */
   --primary-turquoise: #14B8A6;
