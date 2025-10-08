@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import { createClient } from "../../../lib/supabase";
 import Button from "../../../components/ui/Button";
 import toast from "react-hot-toast";
 
@@ -26,41 +27,42 @@ export default function LoginPage() {
     setLoading(true);
 
     try {
-      const response = await fetch("/api/auth/login", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, password }),
+      const supabase = createClient();
+
+      const { data, error } = await supabase.auth.signInWithPassword({
+        email,
+        password,
       });
 
-      const data = await response.json();
-
-      if (!response.ok) {
+      if (error) {
         // Hata mesajlarını Bahasa Indonesia'ya çevir
         let errorMessage = "Terjadi kesalahan";
 
-        if (data.error) {
-          const error = data.error.toLowerCase();
+        const errorLower = error.message.toLowerCase();
 
-          if (
-            error.includes("invalid") ||
-            error.includes("credentials") ||
-            error.includes("password")
-          ) {
-            errorMessage = "Email atau password salah";
-          } else if (error.includes("email") && error.includes("confirmed")) {
-            errorMessage = "Silakan konfirmasi email Anda terlebih dahulu";
-          } else if (error.includes("not found")) {
-            errorMessage = "Akun tidak ditemukan";
-          } else {
-            errorMessage = data.error;
-          }
+        if (
+          errorLower.includes("invalid") ||
+          errorLower.includes("credentials") ||
+          errorLower.includes("password")
+        ) {
+          errorMessage = "Email atau password salah";
+        } else if (
+          errorLower.includes("email") &&
+          errorLower.includes("confirmed")
+        ) {
+          errorMessage = "Silakan konfirmasi email Anda terlebih dahulu";
+        } else if (errorLower.includes("not found")) {
+          errorMessage = "Akun tidak ditemukan";
+        } else {
+          errorMessage = error.message;
         }
 
         throw new Error(errorMessage);
       }
 
       toast.success("Login berhasil!");
-      window.location.href = "/dashboard";
+      router.push("/dashboard");
+      router.refresh();
     } catch (error: any) {
       console.error("Login error:", error);
       toast.error(error.message || "Gagal login");
