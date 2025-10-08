@@ -60,15 +60,17 @@ export default function LoginPage() {
         throw new Error(errorMessage);
       }
 
+      // Login başarılı
       toast.success("Login berhasil!");
-      router.push("/dashboard");
-      router.refresh();
+
+      // window.location.href kullan (router.push yerine)
+      window.location.href = "/dashboard";
     } catch (error: any) {
       console.error("Login error:", error);
       toast.error(error.message || "Gagal login");
-    } finally {
-      setLoading(false);
+      setLoading(false); // Sadece hata olunca loading'i kapat
     }
+    // finally bloğunu kaldır - başarılı login'de sayfa değişiyor zaten
   };
 
   return (
