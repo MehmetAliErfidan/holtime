@@ -134,8 +134,18 @@ export default async function DashboardPage() {
                   {daysLeft} hari tersisa dari trial gratis Anda
                 </p>
               </div>
-              <div className="text-2xl font-bold text-[var(--primary-turquoise)]">
-                {daysLeft} hari
+              <div className="text-right">
+                <div className="text-2xl font-bold text-[var(--primary-turquoise)] mb-2">
+                  {daysLeft} hari
+                </div>
+                {daysLeft <= 3 && (
+                  <Link
+                    href="#payment"
+                    className="text-sm text-[var(--accent-coral)] hover:underline font-medium"
+                  >
+                    Perpanjang Sekarang
+                  </Link>
+                )}
               </div>
             </div>
           </Card>
@@ -237,9 +247,9 @@ export default async function DashboardPage() {
 
         {/* Stats Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-          <Card>
+          <Card className="border-2 border-[var(--accent-coral)]">
             <div className="text-center">
-              <div className="text-3xl font-bold text-[var(--primary-turquoise)] mb-1">
+              <div className="text-3xl font-bold text-[var(--accent-coral)] mb-1">
                 {todayCount || 0}
               </div>
               <p className="text-sm text-[var(--gray-600)]">
@@ -360,10 +370,10 @@ export default async function DashboardPage() {
           </Link>
 
           <Link href="/dashboard/appointments">
-            <Card className="text-center hover:shadow-md transition-shadow cursor-pointer h-full">
-              <div className="w-16 h-16 bg-[var(--primary-pale)] rounded-full flex items-center justify-center mx-auto mb-4">
+            <Card className="text-center hover:shadow-md transition-shadow cursor-pointer h-full border-2 border-[var(--accent-coral)] bg-gradient-to-br from-white to-orange-50">
+              <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <svg
-                  className="w-8 h-8 text-[var(--primary-turquoise)]"
+                  className="w-8 h-8 text-[var(--accent-coral)]"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
