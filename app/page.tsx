@@ -406,11 +406,11 @@ export default function HomePage() {
                 </li>
               </ul>
             </div>
-            <div className="bg-[var(--gray-100)] rounded-lg p-4 border-2 border-[var(--gray-300)]">
+            <div className="bg-[var(--gray-100)] rounded-lg p-2 border-2 border-[var(--gray-300)]">
               <img
                 src="/screenshot-booking.png"
                 alt="Public Booking Interface"
-                className="w-full rounded shadow-lg"
+                className="w-full rounded shadow-lg cursor-pointer hover:scale-105 transition-transform"
               />
             </div>
           </div>
@@ -477,11 +477,11 @@ export default function HomePage() {
                 </li>
               </ul>
             </div>
-            <div className="md:order-1 bg-[var(--gray-100)] rounded-lg p-4 border-2 border-[var(--gray-300)]">
+            <div className="md:order-1 bg-[var(--gray-100)] rounded-lg p-2 border-2 border-[var(--gray-300)]">
               <img
                 src="/screenshot-dashboard.png"
                 alt="Dashboard Interface"
-                className="w-full rounded shadow-lg"
+                className="w-full rounded shadow-lg cursor-pointer hover:scale-105 transition-transform"
               />
             </div>
           </div>
@@ -547,11 +547,11 @@ export default function HomePage() {
                 </li>
               </ul>
             </div>
-            <div className="bg-[var(--gray-100)] rounded-lg p-4 border-2 border-[var(--gray-300)]">
+            <div className="bg-[var(--gray-100)] rounded-lg p-2 border-2 border-[var(--gray-300)]">
               <img
                 src="/screenshot-email.png"
                 alt="Email Template"
-                className="w-full rounded shadow-lg"
+                className="w-full rounded shadow-lg cursor-pointer hover:scale-105 transition-transform"
               />
             </div>
           </div>
