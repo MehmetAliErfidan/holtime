@@ -137,6 +137,428 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* YENİ: İdeal Untuk Bisnis Ini */}
+      <section className="bg-white py-16">
+        <div className="max-w-6xl mx-auto px-6">
+          <h2 className="text-3xl font-bold text-center text-[var(--gray-900)] mb-4">
+            Ideal untuk Bisnis Ini
+          </h2>
+          <p className="text-center text-[var(--gray-700)] mb-12 max-w-2xl mx-auto">
+            Sistem kami dirancang khusus untuk bisnis yang membutuhkan manajemen
+            janji temu sederhana dan efisien
+          </p>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {/* Bisnis Card 1 */}
+            <div className="text-center p-6 rounded-lg border border-[var(--gray-300)] hover:border-[var(--primary-turquoise)] hover:shadow-md transition-all">
+              <div className="w-16 h-16 bg-[var(--primary-pale)] rounded-full flex items-center justify-center mx-auto mb-3">
+                <svg
+                  className="w-8 h-8 text-[var(--primary-turquoise)]"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
+              </div>
+              <h3 className="font-semibold text-[var(--gray-900)]">
+                Salon & Barbershop
+              </h3>
+            </div>
+
+            {/* Bisnis Card 2 */}
+            <div className="text-center p-6 rounded-lg border border-[var(--gray-300)] hover:border-[var(--primary-turquoise)] hover:shadow-md transition-all">
+              <div className="w-16 h-16 bg-[var(--primary-pale)] rounded-full flex items-center justify-center mx-auto mb-3">
+                <svg
+                  className="w-8 h-8 text-[var(--primary-turquoise)]"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"
+                  />
+                </svg>
+              </div>
+              <h3 className="font-semibold text-[var(--gray-900)]">
+                Klinik & Spa
+              </h3>
+            </div>
+
+            {/* Bisnis Card 3 */}
+            <div className="text-center p-6 rounded-lg border border-[var(--gray-300)] hover:border-[var(--primary-turquoise)] hover:shadow-md transition-all">
+              <div className="w-16 h-16 bg-[var(--primary-pale)] rounded-full flex items-center justify-center mx-auto mb-3">
+                <svg
+                  className="w-8 h-8 text-[var(--primary-turquoise)]"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"
+                  />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"
+                  />
+                </svg>
+              </div>
+              <h3 className="font-semibold text-[var(--gray-900)]">
+                Fotografer
+              </h3>
+            </div>
+
+            {/* Bisnis Card 4 */}
+            <div className="text-center p-6 rounded-lg border border-[var(--gray-300)] hover:border-[var(--primary-turquoise)] hover:shadow-md transition-all">
+              <div className="w-16 h-16 bg-[var(--primary-pale)] rounded-full flex items-center justify-center mx-auto mb-3">
+                <svg
+                  className="w-8 h-8 text-[var(--primary-turquoise)]"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"
+                  />
+                </svg>
+              </div>
+              <h3 className="font-semibold text-[var(--gray-900)]">
+                Studio Yoga
+              </h3>
+            </div>
+
+            {/* Bisnis Card 5 */}
+            <div className="text-center p-6 rounded-lg border border-[var(--gray-300)] hover:border-[var(--primary-turquoise)] hover:shadow-md transition-all">
+              <div className="w-16 h-16 bg-[var(--primary-pale)] rounded-full flex items-center justify-center mx-auto mb-3">
+                <svg
+                  className="w-8 h-8 text-[var(--primary-turquoise)]"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                  />
+                </svg>
+              </div>
+              <h3 className="font-semibold text-[var(--gray-900)]">
+                Konsultan
+              </h3>
+            </div>
+
+            {/* Bisnis Card 6 */}
+            <div className="text-center p-6 rounded-lg border border-[var(--gray-300)] hover:border-[var(--primary-turquoise)] hover:shadow-md transition-all">
+              <div className="w-16 h-16 bg-[var(--primary-pale)] rounded-full flex items-center justify-center mx-auto mb-3">
+                <svg
+                  className="w-8 h-8 text-[var(--primary-turquoise)]"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+                  />
+                </svg>
+              </div>
+              <h3 className="font-semibold text-[var(--gray-900)]">
+                Les Privat
+              </h3>
+            </div>
+
+            {/* Bisnis Card 7 */}
+            <div className="text-center p-6 rounded-lg border border-[var(--gray-300)] hover:border-[var(--primary-turquoise)] hover:shadow-md transition-all">
+              <div className="w-16 h-16 bg-[var(--primary-pale)] rounded-full flex items-center justify-center mx-auto mb-3">
+                <svg
+                  className="w-8 h-8 text-[var(--primary-turquoise)]"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
+                  />
+                </svg>
+              </div>
+              <h3 className="font-semibold text-[var(--gray-900)]">
+                Klinik Gigi
+              </h3>
+            </div>
+
+            {/* Bisnis Card 8 */}
+            <div className="text-center p-6 rounded-lg border border-[var(--gray-300)] hover:border-[var(--primary-turquoise)] hover:shadow-md transition-all">
+              <div className="w-16 h-16 bg-[var(--primary-pale)] rounded-full flex items-center justify-center mx-auto mb-3">
+                <svg
+                  className="w-8 h-8 text-[var(--primary-turquoise)]"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
+                  />
+                </svg>
+              </div>
+              <h3 className="font-semibold text-[var(--gray-900)]">
+                Dan Lainnya
+              </h3>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* YENİ: Lihat HolTime dalam Aksi */}
+      <section className="max-w-6xl mx-auto px-6 py-16">
+        <h2 className="text-3xl font-bold text-center text-[var(--gray-900)] mb-4">
+          Lihat HolTime dalam Aksi
+        </h2>
+        <p className="text-center text-[var(--gray-700)] mb-12 max-w-2xl mx-auto">
+          Begini tampilan sistem kami dari sisi pelanggan dan bisnis Anda
+        </p>
+
+        <div className="space-y-16">
+          {/* Screenshot 1: Public Booking */}
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div>
+              <h3 className="text-2xl font-semibold text-[var(--gray-900)] mb-3">
+                Pelanggan Booking dengan Mudah
+              </h3>
+              <p className="text-[var(--gray-700)] mb-4">
+                Pelanggan Anda cukup klik link booking, pilih tanggal dan jam
+                yang tersedia, lalu isi data diri. Sistem otomatis cek slot yang
+                sudah penuh dan hanya tampilkan jam kosong.
+              </p>
+              <ul className="space-y-2 text-[var(--gray-700)]">
+                <li className="flex items-start gap-2">
+                  <svg
+                    className="w-5 h-5 text-[var(--accent-green)] flex-shrink-0 mt-0.5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  Tampilan responsif di semua perangkat
+                </li>
+                <li className="flex items-start gap-2">
+                  <svg
+                    className="w-5 h-5 text-[var(--accent-green)] flex-shrink-0 mt-0.5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  Slot dulu otomatis tidak bisa dipilih
+                </li>
+                <li className="flex items-start gap-2">
+                  <svg
+                    className="w-5 h-5 text-[var(--accent-green)] flex-shrink-0 mt-0.5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  Konfirmasi langsung via email
+                </li>
+              </ul>
+            </div>
+            <div className="bg-[var(--gray-100)] rounded-lg p-4 border-2 border-[var(--gray-300)]">
+              {/* Placeholder untuk screenshot */}
+              <div className="aspect-[4/3] bg-white rounded flex items-center justify-center">
+                <p className="text-[var(--gray-500)]">
+                  Screenshot: Public Booking Page
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Screenshot 2: Dashboard */}
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div className="md:order-2">
+              <h3 className="text-2xl font-semibold text-[var(--gray-900)] mb-3">
+                Dashboard Lengkap untuk Bisnis
+              </h3>
+              <p className="text-[var(--gray-700)] mb-4">
+                Lihat semua janji temu hari ini, minggu ini, atau filter
+                berdasarkan tanggal. Statistik real-time membantu Anda pantau
+                bisnis dengan mudah.
+              </p>
+              <ul className="space-y-2 text-[var(--gray-700)]">
+                <li className="flex items-start gap-2">
+                  <svg
+                    className="w-5 h-5 text-[var(--accent-green)] flex-shrink-0 mt-0.5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  Statistik janji temu real-time
+                </li>
+                <li className="flex items-start gap-2">
+                  <svg
+                    className="w-5 h-5 text-[var(--accent-green)] flex-shrink-0 mt-0.5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  Filter dan cari janji temu dengan mudah
+                </li>
+                <li className="flex items-start gap-2">
+                  <svg
+                    className="w-5 h-5 text-[var(--accent-green)] flex-shrink-0 mt-0.5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  Hubungi pelanggan langsung via WhatsApp
+                </li>
+              </ul>
+            </div>
+            <div className="md:order-1 bg-[var(--gray-100)] rounded-lg p-4 border-2 border-[var(--gray-300)]">
+              {/* Placeholder untuk screenshot */}
+              <div className="aspect-[4/3] bg-white rounded flex items-center justify-center">
+                <p className="text-[var(--gray-500)]">Screenshot: Dashboard</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Screenshot 3: Email Notifications */}
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div>
+              <h3 className="text-2xl font-semibold text-[var(--gray-900)] mb-3">
+                Email Otomatis Tanpa Ribet
+              </h3>
+              <p className="text-[var(--gray-700)] mb-4">
+                Sistem otomatis kirim email konfirmasi ke pelanggan dan Anda. 24
+                jam sebelum janji temu, pengingat dikirim otomatis ke pelanggan.
+              </p>
+              <ul className="space-y-2 text-[var(--gray-700)]">
+                <li className="flex items-start gap-2">
+                  <svg
+                    className="w-5 h-5 text-[var(--accent-green)] flex-shrink-0 mt-0.5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  Konfirmasi otomatis saat booking
+                </li>
+                <li className="flex items-start gap-2">
+                  <svg
+                    className="w-5 h-5 text-[var(--accent-green)] flex-shrink-0 mt-0.5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  Pengingat 24 jam sebelumnya
+                </li>
+                <li className="flex items-start gap-2">
+                  <svg
+                    className="w-5 h-5 text-[var(--accent-green)] flex-shrink-0 mt-0.5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  Bahasa Indonesia yang jelas
+                </li>
+              </ul>
+            </div>
+            <div className="bg-[var(--gray-100)] rounded-lg p-4 border-2 border-[var(--gray-300)]">
+              {/* Placeholder untuk screenshot */}
+              <div className="aspect-[4/3] bg-white rounded flex items-center justify-center">
+                <p className="text-[var(--gray-500)]">
+                  Screenshot: Email Template
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* How It Works */}
       <section className="bg-white py-16">
         <div className="max-w-6xl mx-auto px-6">

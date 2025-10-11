@@ -104,7 +104,7 @@ export default async function DashboardPage() {
         </div>
 
         {/* Trial Status */}
-        {business.subscription_status === "trial" && (
+        {business.subscription_status === "trial" && daysLeft > 0 && (
           <Card className="mb-6 bg-[var(--primary-pale)] border-[var(--primary-turquoise)]">
             <div className="flex items-center justify-between">
               <div>
@@ -117,6 +117,119 @@ export default async function DashboardPage() {
               </div>
               <div className="text-2xl font-bold text-[var(--primary-turquoise)]">
                 {daysLeft} hari
+              </div>
+            </div>
+          </Card>
+        )}
+
+        {/* Trial Status */}
+        {business.subscription_status === "trial" && daysLeft > 0 && (
+          <Card className="mb-6 bg-[var(--primary-pale)] border-[var(--primary-turquoise)]">
+            <div className="flex items-center justify-between">
+              <div>
+                <h3 className="font-semibold text-[var(--gray-900)]">
+                  Trial Aktif
+                </h3>
+                <p className="text-sm text-[var(--gray-700)] mt-1">
+                  {daysLeft} hari tersisa dari trial gratis Anda
+                </p>
+              </div>
+              <div className="text-2xl font-bold text-[var(--primary-turquoise)]">
+                {daysLeft} hari
+              </div>
+            </div>
+          </Card>
+        )}
+
+        {/* Trial Expired Banner */}
+        {(business.subscription_status === "expired" ||
+          (business.subscription_status === "trial" && daysLeft <= 0)) && (
+          <Card className="mb-6 bg-red-50 border-2 border-[var(--accent-red)]">
+            <div className="space-y-4">
+              <div>
+                <h3 className="text-xl font-bold text-[var(--accent-red)] mb-2">
+                  Trial Anda Sudah Habis
+                </h3>
+                <p className="text-[var(--gray-700)]">
+                  Untuk melanjutkan menerima booking, aktifkan akun Anda dengan
+                  transfer Rp 150.000/bulan.
+                </p>
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-6">
+                {/* Sol: QR Code */}
+                <div className="bg-white p-6 rounded-lg border border-[var(--gray-300)] text-center">
+                  <h4 className="font-semibold text-[var(--gray-900)] mb-4">
+                    Scan QR Code
+                  </h4>
+                  <div className="bg-white p-4 inline-block rounded-lg border-2 border-[var(--gray-300)]">
+                    <img
+                      src="/qr-payment.png"
+                      alt="QRIS Payment"
+                      className="w-48 h-48"
+                    />
+                  </div>
+                  <p className="text-sm text-[var(--gray-600)] mt-3">
+                    QRIS - Semua e-wallet
+                  </p>
+                </div>
+
+                {/* Sağ: Manual Transfer */}
+                <div className="bg-white p-6 rounded-lg border border-[var(--gray-300)]">
+                  <h4 className="font-semibold text-[var(--gray-900)] mb-4">
+                    Transfer Manual
+                  </h4>
+                  <div className="space-y-3 text-sm">
+                    <div>
+                      <p className="text-[var(--gray-600)] mb-1">Bank BRI</p>
+                      <p className="font-mono text-base text-[var(--gray-900)]">
+                        1863-01-003727-50-1
+                      </p>
+                      <p className="text-[var(--gray-600)]">
+                        a.n. Rita Alpa Nur
+                      </p>
+                    </div>
+                    <div className="pt-3 border-t border-[var(--gray-300)]">
+                      <p className="text-[var(--gray-600)] mb-1">Jumlah</p>
+                      <p className="text-2xl font-bold text-[var(--accent-coral)]">
+                        Rp 150.000
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Bukti Transfer */}
+              <div className="bg-[var(--primary-pale)] p-4 rounded-lg">
+                <h4 className="font-semibold text-[var(--gray-900)] mb-3">
+                  Setelah Transfer:
+                </h4>
+                <ol className="space-y-2 text-sm text-[var(--gray-700)]">
+                  <li>1. Screenshot bukti transfer</li>
+                  <li>
+                    2. Kirim ke WhatsApp:
+                    <a
+                      href="https://wa.me/6281373082074"
+                      target="_blank"
+                      className="font-mono font-semibold text-[var(--primary-turquoise)] hover:underline ml-1"
+                    >
+                      +62 813-7308-2074
+                    </a>
+                  </li>
+                  <li>
+                    3. Sertakan email bisnis Anda:{" "}
+                    <span className="font-mono">{business.email}</span>
+                  </li>
+                  <li>4. Akun akan diaktifkan dalam 1-6 jam</li>
+                </ol>
+              </div>
+
+              <div className="bg-[var(--gray-100)] p-3 rounded-lg">
+                <p className="text-sm text-[var(--gray-700)]">
+                  <span className="font-semibold">Penting:</span> Link booking
+                  Anda (holtime.vercel.app/{business.slug}) tidak aktif sampai
+                  pembayaran dikonfirmasi.
+                </p>
               </div>
             </div>
           </Card>
