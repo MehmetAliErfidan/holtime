@@ -76,6 +76,11 @@ export default function LoginPage() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-[var(--gray-50)] p-4">
       <div className="w-full max-w-md bg-white rounded-lg shadow-sm border border-[var(--gray-300)] p-8">
+        {/* Logo ekle */}
+        <div className="flex justify-center mb-6">
+          <img src="/logo.png" alt="HolTime Logo" className="h-12" />
+        </div>
+
         <h1 className="text-2xl font-bold text-[var(--gray-900)] mb-6 text-center">
           Masuk ke HolTime
         </h1>

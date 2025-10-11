@@ -94,13 +94,18 @@ export default async function DashboardPage() {
     <main className="min-h-screen p-8 bg-[var(--gray-50)]">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
-        <div className="mb-8">
-          <h1 className="text-3xl font-bold text-[var(--gray-900)]">
-            Dashboard
-          </h1>
-          <p className="text-[var(--gray-500)] mt-1">
-            Selamat datang, {business.name}
-          </p>
+        <div className="mb-8 flex items-center justify-between">
+          <div className="flex items-center gap-4">
+            <img src="/logo.png" alt="HolTime Logo" className="h-10" />
+            <div>
+              <h1 className="text-3xl font-bold text-[var(--gray-900)]">
+                Dashboard
+              </h1>
+              <p className="text-[var(--gray-500)] mt-1">
+                Selamat datang, {business.name}
+              </p>
+            </div>
+          </div>
         </div>
 
         {/* Trial Status */}

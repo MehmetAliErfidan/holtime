@@ -6,8 +6,8 @@ export default function HomePage() {
       {/* Header */}
       <header className="bg-white border-b border-[var(--gray-300)]">
         <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-          <div className="text-2xl font-bold text-[var(--gray-900)]">
-            HolTime
+          <div className="flex items-center gap-3">
+            <img src="/logo.png" alt="HolTime Logo" className="h-8" />
           </div>
           <div className="flex items-center gap-4">
             <Link
@@ -18,7 +18,7 @@ export default function HomePage() {
             </Link>
             <Link
               href="/register"
-              className="px-6 py-2 bg-[var(--accent-coral)] text-white rounded-lg hover:bg-[#F97316] font-medium transition-colors"
+              className="px-6 py-2 bg-[var(--accent-coral)] text-white rounded-lg hover:bg-[#F97316] font-medium"
             >
               Coba Gratis
             </Link>
