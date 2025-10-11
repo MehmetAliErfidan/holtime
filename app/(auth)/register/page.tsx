@@ -84,7 +84,7 @@ export default function RegisterPage() {
       <div className="w-full max-w-md">
         {/* Logo */}
         <div className="flex justify-center mb-6">
-          <img src="/logo.png" alt="HolTime Logo" className="h-12" />
+          <img src="/logo.png" alt="HolTime Logo" className="h-16" />
         </div>
 
         <Card>

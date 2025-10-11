@@ -96,7 +96,7 @@ export default async function DashboardPage() {
         {/* Header */}
         <div className="mb-8 flex items-center justify-between">
           <div className="flex items-center gap-4">
-            <img src="/logo.png" alt="HolTime Logo" className="h-10" />
+            <img src="/logo.png" alt="HolTime Logo" className="h-16" />
             <div>
               <h1 className="text-3xl font-bold text-[var(--gray-900)]">
                 Dashboard

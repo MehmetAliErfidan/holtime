@@ -78,7 +78,7 @@ export default function LoginPage() {
       <div className="w-full max-w-md bg-white rounded-lg shadow-sm border border-[var(--gray-300)] p-8">
         {/* Logo ekle */}
         <div className="flex justify-center mb-6">
-          <img src="/logo.png" alt="HolTime Logo" className="h-12" />
+          <img src="/logo.png" alt="HolTime Logo" className="h-16" />
         </div>
 
         <h1 className="text-2xl font-bold text-[var(--gray-900)] mb-6 text-center">
