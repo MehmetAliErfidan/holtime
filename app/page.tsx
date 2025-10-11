@@ -407,12 +407,11 @@ export default function HomePage() {
               </ul>
             </div>
             <div className="bg-[var(--gray-100)] rounded-lg p-4 border-2 border-[var(--gray-300)]">
-              {/* Placeholder untuk screenshot */}
-              <div className="aspect-[4/3] bg-white rounded flex items-center justify-center">
-                <p className="text-[var(--gray-500)]">
-                  Screenshot: Public Booking Page
-                </p>
-              </div>
+              <img
+                src="/screenshot-booking.png"
+                alt="Public Booking Interface"
+                className="w-full rounded shadow-lg"
+              />
             </div>
           </div>
 
@@ -479,10 +478,11 @@ export default function HomePage() {
               </ul>
             </div>
             <div className="md:order-1 bg-[var(--gray-100)] rounded-lg p-4 border-2 border-[var(--gray-300)]">
-              {/* Placeholder untuk screenshot */}
-              <div className="aspect-[4/3] bg-white rounded flex items-center justify-center">
-                <p className="text-[var(--gray-500)]">Screenshot: Dashboard</p>
-              </div>
+              <img
+                src="/screenshot-dashboard.png"
+                alt="Dashboard Interface"
+                className="w-full rounded shadow-lg"
+              />
             </div>
           </div>
 
@@ -548,12 +548,11 @@ export default function HomePage() {
               </ul>
             </div>
             <div className="bg-[var(--gray-100)] rounded-lg p-4 border-2 border-[var(--gray-300)]">
-              {/* Placeholder untuk screenshot */}
-              <div className="aspect-[4/3] bg-white rounded flex items-center justify-center">
-                <p className="text-[var(--gray-500)]">
-                  Screenshot: Email Template
-                </p>
-              </div>
+              <img
+                src="/screenshot-email.png"
+                alt="Email Template"
+                className="w-full rounded shadow-lg"
+              />
             </div>
           </div>
         </div>
